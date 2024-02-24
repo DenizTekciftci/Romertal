@@ -8,28 +8,6 @@ namespace Romertal
 {
     public static class Converter
     {
-        private static readonly Dictionary<char, int> NumeralValuePairs = new Dictionary<char, int>
-        {
-            { 'M', 1000 },
-            { 'D', 500 },
-            { 'C', 100 },
-            { 'L', 50 },
-            { 'X', 10 },
-            { 'V', 5 },
-            { 'I', 1 },
-        };
-
-        private static readonly Dictionary<int, char> ValueNumeralPairs = new Dictionary<int, char>
-        {
-            { 1000, 'M' },
-            { 500, 'D' },
-            { 100, 'C' },
-            { 50, 'L' },
-            { 10, 'X' },
-            { 5, 'V' },
-            { 1, 'I'},
-        };
-
         // Only powers of ten as divisors
         private static readonly List<int> Divisors = new List<int> {1000, 100, 10, 1};
 
@@ -46,15 +24,15 @@ namespace Romertal
             // Single character numeral
             if(romanNumeral.numeral.Length == 1)
             {
-                return NumeralValuePairs[romanNumeral.numeral[0]];
+                return Consts.NumeralValuePairs[romanNumeral.numeral[0]];
             }
 
             char prevChar = romanNumeral.numeral[0];
-            int prevValue = NumeralValuePairs[prevChar];
+            int prevValue = Consts.NumeralValuePairs[prevChar];
 
             foreach (char currentChar in romanNumeral.numeral.Skip(1))
             {
-                var currentValue = NumeralValuePairs[currentChar];
+                var currentValue = Consts.NumeralValuePairs[currentChar];
 
                 if(prevValue < currentValue) 
                 {
@@ -66,11 +44,11 @@ namespace Romertal
                 }
 
                 prevChar = currentChar;
-                prevValue = NumeralValuePairs[prevChar];
+                prevValue = Consts.NumeralValuePairs[prevChar];
             }
 
             // Add the last character
-            result += NumeralValuePairs[romanNumeral.numeral.Last()];
+            result += Consts.NumeralValuePairs[romanNumeral.numeral.Last()];
 
             return result;
         }
@@ -88,7 +66,7 @@ namespace Romertal
 
             foreach(var divisor in Divisors)
             {
-                var numeral = ValueNumeralPairs[divisor];
+                var numeral = Consts.ValueNumeralPairs[divisor];
                 int divCount = remainder / divisor;
 
                 // Up to three of the same character
@@ -98,7 +76,7 @@ namespace Romertal
                 }
                 else if (divCount == 9)
                 {
-                    roman = roman + numeral + ValueNumeralPairs[divisor * 10];
+                    roman = roman + numeral + Consts.ValueNumeralPairs[divisor * 10];
                 }
                 else
                 {
@@ -106,7 +84,7 @@ namespace Romertal
                     {
                         roman += numeral;
                     }
-                    roman = roman + ValueNumeralPairs[divisor * 5] + new string(numeral, Math.Max(divCount - 5, 0));
+                    roman = roman + Consts.ValueNumeralPairs[divisor * 5] + new string(numeral, Math.Max(divCount - 5, 0));
                 }
 
                 // Update

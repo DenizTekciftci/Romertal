@@ -3,23 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Romertal
 {
     public class RomanNumeral
     {
         private string? _numeral;
         private string allowedBeforeLargerNumeral = "IXC";
-        private static readonly Dictionary<char, int> NumeralValuePairs = new Dictionary<char, int>
-        {
-            { 'I', 1 },
-            { 'V', 5 },
-            { 'X', 10 },
-            { 'L', 50 },
-            { 'C', 100 },
-            { 'D', 500 },
-            { 'M', 1000 }
-        };
 
         public string? numeral
         {
@@ -60,11 +49,11 @@ namespace Romertal
             int ascendingCharsCounter = 0;
             int equalCharsCounter = 0;
             char prevChar = input[0];
-            int prevValue = NumeralValuePairs[prevChar];
+            int prevValue = Consts.NumeralValuePairs[prevChar];
 
             foreach (char currentChar in input.Skip(1))
             {
-                var currentValue = NumeralValuePairs[currentChar];
+                var currentValue = Consts.NumeralValuePairs[currentChar];
 
                 if (prevValue < currentValue)
                 {
@@ -111,7 +100,7 @@ namespace Romertal
                 }
 
                 prevChar = currentChar;
-                prevValue = NumeralValuePairs[prevChar];
+                prevValue = Consts.NumeralValuePairs[prevChar];
             }
 
             return true;
