@@ -1,6 +1,6 @@
 using Romertal;
 
-namespace RomanNumeralTestClass.Acceptance
+namespace RomanNumeralTests.Acceptance
 {
     [TestClass]
     public class IntToRomanTests

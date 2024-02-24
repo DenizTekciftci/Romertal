@@ -2318,9 +2318,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deniz\\source\\repos\\Romertal\\RomanNumeralTestClass\\RomanNumeralTestClass.csproj",
-      "projectName": "RomanNumeralTestClass",
-      "projectPath": "C:\\Users\\deniz\\source\\repos\\Romertal\\RomanNumeralTestClass\\RomanNumeralTestClass.csproj",
+      "projectUniqueName": "C:\\Users\\deniz\\source\\repos\\Romertal\\RomanNumeralTestClass\\RomanNumeralTests.csproj",
+      "projectName": "RomanNumeralTests",
+      "projectPath": "C:\\Users\\deniz\\source\\repos\\Romertal\\RomanNumeralTestClass\\RomanNumeralTests.csproj",
       "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\deniz\\source\\repos\\Romertal\\RomanNumeralTestClass\\obj\\",
       "projectStyle": "PackageReference",

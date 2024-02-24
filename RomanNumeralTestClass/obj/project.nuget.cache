@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KAsEkpqVS2HP5U5+lsTn3R26yg1H/2MheGfaFBgRR80MX+WlOzzsx+k5BOwNobdgMc3h/1E//DXBLEJ9HvW8rA==",
+  "dgSpecHash": "HZs5bWyRqFLTbW7p32LmMJrx53sG7Jn+Va155jVRHCXRNs8AjHAvrDRO+nyUewv2z4dhohOYrZXj6hfzaO2jQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\deniz\\source\\repos\\Romertal\\RomanNumeralTestClass\\RomanNumeralTestClass.csproj",
+  "projectFilePath": "C:\\Users\\deniz\\source\\repos\\Romertal\\RomanNumeralTestClass\\RomanNumeralTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\deniz\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\deniz\\.nuget\\packages\\microsoft.codecoverage\\17.7.1\\microsoft.codecoverage.17.7.1.nupkg.sha512",

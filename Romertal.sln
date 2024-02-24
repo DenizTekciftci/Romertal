@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Romertal", "Romertal\Romertal.csproj", "{36D5A9C4-BA03-4971-9741-674EFBA1A20A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumeralTestClass", "RomanNumeralTestClass\RomanNumeralTestClass.csproj", "{F5FF5DC6-120F-4913-B449-42F1F8EDAE22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumeralTests", "RomanNumeralTestClass\RomanNumeralTests.csproj", "{F5FF5DC6-120F-4913-B449-42F1F8EDAE22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
