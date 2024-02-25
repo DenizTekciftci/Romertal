@@ -30,10 +30,34 @@ namespace RomanNumeralTests.Acceptance
         }
 
         [TestMethod]
+        public void MCCQX_Is_Invalid()
+        {
+            // Arrange
+            var input = "MCCQX";
+
+            // Act + Assert
+            Assert.ThrowsException<ArgumentException>(() => { var numeral = new RomanNumeral(input); });
+        }
+
+        [TestMethod]
         public void MDCCCXCIX_Equals_1899()
         {
             // Arrange
             var input = "MDCCCXCIX";
+            var numeral = new RomanNumeral(input);
+
+            // Act
+            var number = Converter.Convert(numeral);
+
+            // Assert
+            Assert.AreEqual(number, 1899);
+        }
+
+        [TestMethod]
+        public void mdcccxcix_Equals_1899()
+        {
+            // Arrange
+            var input = "mdcccxcix";
             var numeral = new RomanNumeral(input);
 
             // Act

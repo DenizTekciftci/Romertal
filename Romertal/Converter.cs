@@ -61,10 +61,15 @@ namespace Romertal
 
             if (number > limit)
             {
-                throw new ArgumentException($"Cannot convert numbers larger than {limit}");
+                throw new ArgumentException($"Cannot convert numbers larger than {limit}.");
             }
 
-            foreach(var divisor in Divisors)
+            if(number < 0)
+            {
+                throw new ArgumentException($"Cannot convert negative numbers.");
+            }
+
+            foreach (var divisor in Divisors)
             {
                 var numeral = Consts.ValueNumeralPairs[divisor];
                 int divCount = remainder / divisor;

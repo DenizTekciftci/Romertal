@@ -79,5 +79,15 @@ namespace RomanNumeralTests.Acceptance
             // Act + Assert
             Assert.ThrowsException<ArgumentException>(() => { var roman = Converter.Convert(num); });
         }
+
+        [TestMethod]
+        public void Negative1_Is_TooSmall()
+        {
+            // Arrange
+            var num = -1;
+
+            // Act + Assert
+            Assert.ThrowsException<ArgumentException>(() => { var roman = Converter.Convert(num); });
+        }
     }
 }
