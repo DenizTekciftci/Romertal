@@ -12,5 +12,7 @@ jobs:
         steps:
             - name: "Cd intranet"
               run: "cd c:/source/Consulting/intranet"
+            - name: Pull
+              run: "git pull"
             - name: Status
               run: "git status"
