@@ -3,7 +3,7 @@ name: Pull and Scream
 on:
     push:
         branches:
-            - master
+            - main
 
 jobs:
     deploy:
