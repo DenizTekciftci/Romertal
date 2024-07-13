@@ -14,3 +14,5 @@ jobs:
               run: "cd c:/source/Consulting/intranet ;; git pull"
             - name: Status
               run: "git status"
+            - name: "Location"
+              run: 'echo "$PWD"'
