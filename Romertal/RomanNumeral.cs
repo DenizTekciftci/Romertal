@@ -76,7 +76,7 @@ namespace Romertal
 
                     if (prevChar == 'C' && !("DM".Contains(currentChar)))
                     {
-                        return false;
+                        return false; 
                     }
 
                     ascendingCharsCounter++;
